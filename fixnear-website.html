@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FixNear connects homes, cafes and businesses across Delhi NCR with local service professionals for AC, plumbing, electrical and loading services.">
+  <meta name="theme-color" content="#102033">
+  <title>FixNear | Your Local Service Partner</title>
+  <style>
+    :root{--navy:#102033;--navy2:#172d45;--green:#16a36a;--green2:#0d8051;--ink:#172333;--muted:#657386;--bg:#f5f8fb;--line:#e4eaf0;--white:#fff}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+    a{text-decoration:none;color:inherit}.wrap{width:min(1120px,92%);margin:auto}
+    header{background:var(--navy);color:#fff;position:sticky;top:0;z-index:10;border-bottom:1px solid #ffffff1a}
+    .nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{font-size:1.55rem;font-weight:800;letter-spacing:-.7px}.brand span{color:#4cdda0}
+    .navlinks{display:flex;align-items:center;gap:23px;font-size:.92rem;color:#e3eaf1}.navlinks a:hover{color:#65e6ad}
+    .navbtn,.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:10px;font-weight:700}
+    .navbtn,.primary{background:var(--green);color:#fff}.navbtn:hover,.primary:hover{background:var(--green2)}
+    .hero{background:linear-gradient(120deg,var(--navy),var(--navy2));color:#fff;padding:76px 0 70px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:45px;align-items:center}
+    .eyebrow{display:inline-block;color:#8df0bd;background:#ffffff12;border:1px solid #ffffff25;padding:7px 12px;border-radius:99px;font-size:.82rem;font-weight:700}
+    h1{font-size:clamp(2.35rem,5vw,4.25rem);line-height:1.06;letter-spacing:-2px;margin:20px 0}
+    .hero p{font-size:1.08rem;color:#d8e2ec;max-width:590px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.secondary{border:1px solid #ffffff65;color:#fff}
+    .hero-note{font-size:.84rem!important;color:#b8c8d8!important;margin-top:18px}
+    .hero-card{background:#ffffff0e;border:1px solid #ffffff22;border-radius:22px;padding:25px;backdrop-filter:blur(8px)}
+    .hero-card h3{margin:0 0 14px;font-size:1.15rem}.quick-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .quick{background:#ffffff12;border-radius:13px;padding:15px}.quick b{display:block;margin-top:5px}.quick small{color:#c5d3df}
+    section{padding:68px 0}.section-head{text-align:center;max-width:680px;margin:0 auto 34px}.section-head h2{font-size:2rem;letter-spacing:-.8px;margin:0 0 10px}.section-head p{color:var(--muted);margin:0}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:0 7px 24px #17233308}
+    .ico{width:45px;height:45px;border-radius:13px;background:#e9f8f0;display:grid;place-items:center;font-size:1.35rem}
+    .card h3{margin:15px 0 7px;font-size:1.08rem}.card p{margin:0;color:var(--muted);font-size:.92rem}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:22px}.audience{border-radius:20px;padding:30px;background:#fff;border:1px solid var(--line)}
+    .audience.dark{background:var(--navy);color:#fff;border-color:var(--navy)}.audience p{color:var(--muted)}.audience.dark p{color:#cbd7e3}
+    .audience ul{padding-left:20px;color:inherit}.audience li{margin:8px 0}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}.num{font-weight:800;color:var(--green);font-size:1.3rem}
+    .cta{background:#e9f7ef;padding:42px;border-radius:22px;display:flex;align-items:center;justify-content:space-between;gap:20px}.cta h2{margin:0 0 7px}.cta p{margin:0;color:#536577}
+    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px}.contact-panel{background:var(--navy);color:#fff;border-radius:18px;padding:28px}.contact-panel p{color:#d0dbe6}
+    form{background:#fff;border:1px solid var(--line);border-radius:18px;padding:25px;display:grid;gap:13px}
+    label{font-size:.9rem;font-weight:700}input,select,textarea{width:100%;padding:12px;border:1px solid #d6dfe8;border-radius:9px;font:inherit;margin-top:5px;background:#fff}
+    textarea{min-height:95px;resize:vertical}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    footer{background:#0b1827;color:#c8d3de;padding:28px 0}.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:.9rem}
+    .notice{font-size:.82rem;color:#718094;margin-top:14px}
+    @media(max-width:800px){.navlinks{display:none}.hero-grid,.split,.contact-grid{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr}.hero{padding:55px 0}.cta{align-items:flex-start;flex-direction:column}}
+    @media(max-width:480px){.cards{grid-template-columns:1fr 1fr}.card{padding:16px}.quick-list{grid-template-columns:1fr 1fr}.form-row{grid-template-columns:1fr}.cta{padding:27px}section{padding:52px 0}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#">Fix<span>Near</span></a>
+    <nav class="navlinks"><a href="#services">Services</a><a href="#business">For Businesses</a><a href="#how">How It Works</a><a href="#contact">Contact</a></nav>
+    <a class="navbtn" href="#contact">Book a Service</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">HOME • CAFES • BUSINESSES | DELHI NCR</span>
+        <h1>Your Local<br>Service Partner.</h1>
+        <p>Need a reliable professional for your home, cafe or workplace? FixNear helps you connect with local service providers for everyday repairs, maintenance and labour requirements.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#contact">Request a Service</a>
+          <a class="btn secondary" href="#services">Explore Services</a>
+        </div>
+        <p class="hero-note">Tell us what you need. We’ll help coordinate the next step.</p>
+      </div>
+      <div class="hero-card">
+        <h3>Services at a glance</h3>
+        <div class="quick-list">
+          <div class="quick">❄️ <b>AC Services</b><small>Repair & installation</small></div>
+          <div class="quick">🚰 <b>Plumbing</b><small>Leaks & fittings</small></div>
+          <div class="quick">⚡ <b>Electrical</b><small>Repairs & maintenance</small></div>
+          <div class="quick">📦 <b>Loading Help</b><small>Loading & unloading</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head"><h2>Services We Help Arrange</h2><p>One point of contact for common home and business service needs across our active Delhi NCR service areas.</p></div>
+      <div class="cards">
+        <article class="card"><div class="ico">❄️</div><h3>AC Repair & Installation</h3><p>AC fitting, servicing and repair requests for homes, cafes and workplaces.</p></article>
+        <article class="card"><div class="ico">🚰</div><h3>Plumbing</h3><p>Tap, pipe, leakage, fitting and other everyday plumbing requirements.</p></article>
+        <article class="card"><div class="ico">⚡</div><h3>Electrician</h3><p>Electrical repairs, fittings and maintenance through suitable professionals.</p></article>
+        <article class="card"><div class="ico">📦</div><h3>Loading & Unloading</h3><p>Labour assistance for shifting, stock movement and business requirements.</p></article>
+        <article class="card"><div class="ico">🧹</div><h3>Cleaning</h3><p>Ask us about cleaning support for homes and commercial spaces.</p></article>
+        <article class="card"><div class="ico">🪚</div><h3>Carpentry</h3><p>Furniture repairs, fittings and basic carpentry requests.</p></article>
+        <article class="card"><div class="ico">🛠️</div><h3>General Maintenance</h3><p>Tell us what needs fixing and we’ll check suitable local availability.</p></article>
+        <article class="card"><div class="ico">🏪</div><h3>Business Support</h3><p>Recurring or one-time service coordination for cafes, shops and offices.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="business" style="background:#eef3f7">
+    <div class="wrap">
+      <div class="section-head"><h2>For Homes & Businesses</h2><p>Whether it’s a home repair or a cafe maintenance requirement, start with one simple enquiry.</p></div>
+      <div class="split">
+        <div class="audience"><div class="ico">🏠</div><h3>For Home Customers</h3><p>Get help finding a suitable local professional for everyday service needs.</p><ul><li>AC, plumbing and electrical requests</li><li>Loading and unloading assistance</li><li>Clear estimate before work begins</li></ul></div>
+        <div class="audience dark"><div class="ico">☕</div><h3>For Cafes & Businesses</h3><p>Coordinate service requests for your cafe, restaurant, shop, office or property.</p><ul><li>Maintenance and repair requests</li><li>Labour support when needed</li><li>One contact for service coordination</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="section-head"><h2>How FixNear Works</h2><p>A simple enquiry-to-service process.</p></div>
+      <div class="steps">
+        <div class="step"><div class="num">01</div><h3>Send Your Request</h3><p>Share your service, location and preferred time with FixNear.</p></div>
+        <div class="step"><div class="num">02</div><h3>Confirm the Details</h3><p>We check availability and share the estimate and next steps before confirmation.</p></div>
+        <div class="step"><div class="num">03</div><h3>Get the Service</h3><p>Once confirmed, the service professional attends the job. Share feedback after completion.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="cta"><div><h2>Need service for your home or business?</h2><p>Send FixNear your requirement and service location.</p></div><a class="btn primary" href="#contact">Get in Touch</a></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-head"><h2>Request a Service</h2><p>Fill in the details. Your request will open as a WhatsApp message.</p></div>
+      <div class="contact-grid">
+        <div class="contact-panel"><h3>Let’s solve your service requirement.</h3><p>Serving selected locations across Delhi NCR. Availability is confirmed individually for each request.</p><p><strong>WhatsApp:</strong> Add your business number before publishing.</p><p><strong>Business enquiries:</strong> Cafes, restaurants, shops, offices and residential customers are welcome.</p></div>
+        <form id="bookingForm">
+          <div class="form-row">
+            <div><label for="name">Your name</label><input id="name" required placeholder="Enter your name"></div>
+            <div><label for="phone">Contact number</label><input id="phone" required inputmode="tel" placeholder="Your mobile number"></div>
+          </div>
+          <div class="form-row">
+            <div><label for="type">You are</label><select id="type"><option>Home customer</option><option>Cafe / Restaurant</option><option>Shop / Office</option><option>Property manager</option></select></div>
+            <div><label for="service">Service required</label><select id="service"><option>AC repair / installation</option><option>Plumbing</option><option>Electrician</option><option>Loading / unloading</option><option>Cleaning</option><option>Carpentry</option><option>Other</option></select></div>
+          </div>
+          <div><label for="location">Area / location</label><input id="location" required placeholder="e.g. Civil Lines, Delhi"></div>
+          <div><label for="details">What do you need?</label><textarea id="details" placeholder="Briefly describe the work and preferred date/time"></textarea></div>
+          <button class="btn primary" type="submit" style="border:0;cursor:pointer;font-size:1rem">Send Request on WhatsApp</button>
+          <p class="notice">Please confirm the final price, timing and service details before work starts.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap foot"><div><strong>FixNear</strong> — Your Local Service Partner.</div><div>Delhi NCR · Home & Business Services</div><div>© <span id="year"></span> FixNear</div></div></footer>
+
+<script>
+  // IMPORTANT: Replace this placeholder with your WhatsApp number:
+  // India format, country code included, digits only. Example: 919876543210
+  const FIXNEAR_WHATSAPP_NUMBER = "91XXXXXXXXXX";
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("bookingForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    if (FIXNEAR_WHATSAPP_NUMBER.includes("X")) {
+      alert("Website setup pending: replace 91XXXXXXXXXX in the code with your FixNear WhatsApp number before using bookings.");
+      return;
+    }
+    const fields = ["name","phone","type","service","location","details"];
+    const values = Object.fromEntries(fields.map(id => [id, document.getElementById(id).value.trim()]));
+    const message = `Hello FixNear! I want to request a service.\n\nName: ${values.name}\nContact: ${values.phone}\nCustomer type: ${values.type}\nService: ${values.service}\nLocation: ${values.location}\nDetails: ${values.details || "Not provided"}\n\nPlease share availability and an estimate.`;
+    window.open(`https://wa.me/${FIXNEAR_WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, "_blank");
+  });
+</script>
+</body>
+</html>
