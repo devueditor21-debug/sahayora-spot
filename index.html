@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="FixNear connects homes, cafes and businesses across Delhi NCR with local service professionals for AC, plumbing, electrical and loading services.">
+  <meta name="description" content="SevaSpot connects homes, cafes and businesses across Delhi NCR with local service professionals for AC, plumbing, electrical and loading services.">
   <meta name="theme-color" content="#102033">
-  <title>FixNear | Your Local Service Partner</title>
+  <title>SevaSpot | Your Local Service Partner</title>
   <style>
     :root{--navy:#102033;--navy2:#172d45;--green:#16a36a;--green2:#0d8051;--ink:#172333;--muted:#657386;--bg:#f5f8fb;--line:#e4eaf0;--white:#fff}
     *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
@@ -60,7 +60,7 @@
       <div>
         <span class="eyebrow">HOME • CAFES • BUSINESSES | DELHI NCR</span>
         <h1>Your Local<br>Service Partner.</h1>
-        <p>Need a reliable professional for your home, cafe or workplace? FixNear helps you connect with local service providers for everyday repairs, maintenance and labour requirements.</p>
+        <p>Need a reliable professional for your home, cafe or workplace? SevaSpot helps you connect with local service providers for everyday repairs, maintenance and labour requirements.</p>
         <div class="hero-actions">
           <a class="btn primary" href="#contact">Request a Service</a>
           <a class="btn secondary" href="#services">Explore Services</a>
@@ -107,9 +107,9 @@
 
   <section id="how">
     <div class="wrap">
-      <div class="section-head"><h2>How FixNear Works</h2><p>A simple enquiry-to-service process.</p></div>
+      <div class="section-head"><h2>How SevaSpot Works</h2><p>A simple enquiry-to-service process.</p></div>
       <div class="steps">
-        <div class="step"><div class="num">01</div><h3>Send Your Request</h3><p>Share your service, location and preferred time with FixNear.</p></div>
+        <div class="step"><div class="num">01</div><h3>Send Your Request</h3><p>Share your service, location and preferred time with SevaSpot.</p></div>
         <div class="step"><div class="num">02</div><h3>Confirm the Details</h3><p>We check availability and share the estimate and next steps before confirmation.</p></div>
         <div class="step"><div class="num">03</div><h3>Get the Service</h3><p>Once confirmed, the service professional attends the job. Share feedback after completion.</p></div>
       </div>
@@ -118,7 +118,7 @@
 
   <section>
     <div class="wrap">
-      <div class="cta"><div><h2>Need service for your home or business?</h2><p>Send FixNear your requirement and service location.</p></div><a class="btn primary" href="#contact">Get in Touch</a></div>
+      <div class="cta"><div><h2>Need service for your home or business?</h2><p>Send SevaSpot your requirement and service location.</p></div><a class="btn primary" href="#contact">Get in Touch</a></div>
     </div>
   </section>
 
@@ -146,23 +146,23 @@
   </section>
 </main>
 
-<footer><div class="wrap foot"><div><strong>FixNear</strong> — Your Local Service Partner.</div><div>Delhi NCR · Home & Business Services</div><div>© <span id="year"></span> FixNear</div></div></footer>
+<footer><div class="wrap foot"><div><strong>SevaSpot</strong> — Your Local Service Partner.</div><div>Delhi NCR · Home & Business Services</div><div>© <span id="year"></span> SevaSpot</div></div></footer>
 
 <script>
   // IMPORTANT: Replace this placeholder with your WhatsApp number:
   // India format, country code included, digits only. Example: 919876543210
-  const FIXNEAR_WHATSAPP_NUMBER = "91XXXXXXXXXX";
+  const SEVASPOT_WHATSAPP_NUMBER = "91XXXXXXXXXX";
   document.getElementById("year").textContent = new Date().getFullYear();
   document.getElementById("bookingForm").addEventListener("submit", function(e) {
     e.preventDefault();
-    if (FIXNEAR_WHATSAPP_NUMBER.includes("X")) {
-      alert("Website setup pending: replace 91XXXXXXXXXX in the code with your FixNear WhatsApp number before using bookings.");
+    if (SEVASPOT_WHATSAPP_NUMBER.includes("X")) {
+      alert("Website setup pending: replace 91XXXXXXXXXX in the code with your SevaSpot WhatsApp number before using bookings.");
       return;
     }
     const fields = ["name","phone","type","service","location","details"];
     const values = Object.fromEntries(fields.map(id => [id, document.getElementById(id).value.trim()]));
-    const message = `Hello FixNear! I want to request a service.\n\nName: ${values.name}\nContact: ${values.phone}\nCustomer type: ${values.type}\nService: ${values.service}\nLocation: ${values.location}\nDetails: ${values.details || "Not provided"}\n\nPlease share availability and an estimate.`;
-    window.open(`https://wa.me/${FIXNEAR_WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, "_blank");
+    const message = `Hello SevaSpot! I want to request a service.\n\nName: ${values.name}\nContact: ${values.phone}\nCustomer type: ${values.type}\nService: ${values.service}\nLocation: ${values.location}\nDetails: ${values.details || "Not provided"}\n\nPlease share availability and an estimate.`;
+    window.open(`https://wa.me/${SEVASPOT_WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, "_blank");
   });
 </script>
 </body>
