@@ -35,7 +35,7 @@
     .audience ul{padding-left:20px;color:inherit}.audience li{margin:8px 0}
     .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}.num{font-weight:800;color:var(--green);font-size:1.3rem}
     .cta{background:#e9f7ef;padding:42px;border-radius:22px;display:flex;align-items:center;justify-content:space-between;gap:20px}.cta h2{margin:0 0 7px}.cta p{margin:0;color:#536577}
-    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px}.contact-panel{background:var(--navy);color:#fff;border-radius:18px;padding:28px}.contact-panel p{color:#d0dbe6}
+    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px}.contact-panel{background:var(--navy);color:#fff;border-radius:18px;padding:28px}.contact-panel p{color:#d0dbe6}.contact-link{color:#8df0bd;text-decoration:underline;font-weight:700}
     form{background:#fff;border:1px solid var(--line);border-radius:18px;padding:25px;display:grid;gap:13px}
     label{font-size:.9rem;font-weight:700}input,select,textarea{width:100%;padding:12px;border:1px solid #d6dfe8;border-radius:9px;font:inherit;margin-top:5px;background:#fff}
     textarea{min-height:95px;resize:vertical}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -53,7 +53,6 @@
     <a class="navbtn" href="#contact">Book a Service</a>
   </div>
 </header>
-
 <main>
   <section class="hero">
     <div class="wrap hero-grid">
@@ -78,7 +77,6 @@
       </div>
     </div>
   </section>
-
   <section id="services">
     <div class="wrap">
       <div class="section-head"><h2>Services We Help Arrange</h2><p>One point of contact for common home and business service needs across our active Delhi NCR service areas.</p></div>
@@ -94,7 +92,6 @@
       </div>
     </div>
   </section>
-
   <section id="business" style="background:#eef3f7">
     <div class="wrap">
       <div class="section-head"><h2>For Homes & Businesses</h2><p>Whether it’s a home repair or a cafe maintenance requirement, start with one simple enquiry.</p></div>
@@ -104,7 +101,6 @@
       </div>
     </div>
   </section>
-
   <section id="how">
     <div class="wrap">
       <div class="section-head"><h2>How SAHAYORA SPOT Works</h2><p>A simple enquiry-to-service process.</p></div>
@@ -115,18 +111,22 @@
       </div>
     </div>
   </section>
-
   <section>
     <div class="wrap">
       <div class="cta"><div><h2>Need service for your home or business?</h2><p>Send SAHAYORA SPOT your requirement and service location.</p></div><a class="btn primary" href="#contact">Get in Touch</a></div>
     </div>
   </section>
-
   <section id="contact">
     <div class="wrap">
       <div class="section-head"><h2>Request a Service</h2><p>Fill in the details. Your request will open as a WhatsApp message.</p></div>
       <div class="contact-grid">
-        <div class="contact-panel"><h3>Let’s solve your service requirement.</h3><p>Serving selected locations across Delhi NCR. Availability is confirmed individually for each request.</p><p><strong>WhatsApp:</strong> Add your business number before publishing.</p><p><strong>Business enquiries:</strong> Cafes, restaurants, shops, offices and residential customers are welcome.</p></div>
+        <div class="contact-panel">
+          <h3>Let’s solve your service requirement.</h3>
+          <p>Serving selected locations across Delhi NCR. Availability is confirmed individually for each request.</p>
+          <p><strong>Call:</strong> <a class="contact-link" href="tel:+919717056484">+91 97170 56484</a></p>
+          <p><strong>WhatsApp:</strong> <a class="contact-link" href="https://wa.me/919717056484" target="_blank" rel="noopener">Chat with SAHAYORA SPOT</a></p>
+          <p><strong>Business enquiries:</strong> Cafes, restaurants, shops, offices and residential customers are welcome.</p>
+        </div>
         <form id="bookingForm">
           <div class="form-row">
             <div><label for="name">Your name</label><input id="name" required placeholder="Enter your name"></div>
@@ -145,20 +145,12 @@
     </div>
   </section>
 </main>
-
-<footer><div class="wrap foot"><div><strong>SAHAYORA SPOT</strong> — Your Local Service Partner.</div><div>Delhi NCR · Home & Business Services</div><div>© <span id="year"></span> SAHAYORA SPOT</div></div></footer>
-
+<footer><div class="wrap foot"><div><strong>SAHAYORA SPOT</strong> — Your Local Service Partner.</div><div>Delhi NCR · Home & Business Services</div><div>Call / WhatsApp: +91 97170 56484</div><div>© <span id="year"></span> SAHAYORA SPOT</div></div></footer>
 <script>
-  // IMPORTANT: Replace this placeholder with your WhatsApp number:
-  // India format, country code included, digits only. Example: 919876543210
-  const SAHAYORA_SPOT_WHATSAPP_NUMBER = "91XXXXXXXXXX";
+  const SAHAYORA_SPOT_WHATSAPP_NUMBER = "919717056484";
   document.getElementById("year").textContent = new Date().getFullYear();
   document.getElementById("bookingForm").addEventListener("submit", function(e) {
     e.preventDefault();
-    if (SAHAYORA_SPOT_WHATSAPP_NUMBER.includes("X")) {
-      alert("Website setup pending: replace 91XXXXXXXXXX in the code with your SAHAYORA SPOT WhatsApp number before using bookings.");
-      return;
-    }
     const fields = ["name","phone","type","service","location","details"];
     const values = Object.fromEntries(fields.map(id => [id, document.getElementById(id).value.trim()]));
     const message = `Hello SAHAYORA SPOT! I want to request a service.\n\nName: ${values.name}\nContact: ${values.phone}\nCustomer type: ${values.type}\nService: ${values.service}\nLocation: ${values.location}\nDetails: ${values.details || "Not provided"}\n\nPlease share availability and an estimate.`;
